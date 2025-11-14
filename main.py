@@ -1,6 +1,7 @@
 import asyncio
 
 from dotenv import load_dotenv
+from livekit.plugins import openai, silero
 from livekit.agents import AutoSubscribe, JobContext, WorkerOptions, cli, llm
 #from livekit.agents.voice_assistant import VoiceAssistant
 from livekit.plugins.openai.voice_assistant import VoiceAssistant
@@ -38,6 +39,7 @@ async def entrypoint(ctx: JobContext):
 if __name__ == "__main__":
 
     cli.run_app(WorkerOptions(entrypoint_fnc=entrypoint))
+
 
 
 
